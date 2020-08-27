@@ -7,7 +7,7 @@ class Counter extends Component {
 		console.log("Render counter!");
 		return (
 			<div>
-				<button className="btn btn-primary m-1">{this.props.count}</button>
+				<button className="btn btn-info m-1">{this.props.count}</button>
 				<button
 					className="btn btn-secondary m-1"
 					onClick={() => this.props.handleIncrement(this.props.id)}

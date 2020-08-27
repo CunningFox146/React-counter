@@ -13,6 +13,9 @@ class CountersMenu extends Component {
 				<button className="btn btn-success m-2" onClick={this.addCounter}>
 					Add counter
 				</button>
+				<button className="btn btn-warning m-2" onClick={this.Clear}>
+					Clear
+				</button>
 				<div>
 					{this.state.counters.map((c) => (
 						<Counter
@@ -27,6 +30,10 @@ class CountersMenu extends Component {
 			</React.Fragment>
 		);
 	}
+
+	Clear = () => {
+		this.setState({ counters: [] });
+	};
 
 	addCounter = () => {
 		const counters = [...this.state.counters];
